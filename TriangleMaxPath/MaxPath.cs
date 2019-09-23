@@ -6,6 +6,26 @@ using System.Collections.Generic;
 
 namespace TriangleMaxPath
 {
+    /* Rules:
+     * You will be given a triangle input (which is a directed graph) and you need to find the path that 
+     * provides the maximum possible sum of the numbers per the given rules below: 
+     * 1.You will start from the top and move downwards to the last possible node. 
+     * 2.You must proceed by changing between even and odd numbers subsequently. Suppose that you are on 
+     * an even number, the next number you choose must be odd, or if you are on an odd number the next 
+     * number must be even. In other words, the final path would be Odd -> even -> odd -> even ... 
+     * 3.You must reach to the bottom of the pyramid. 
+     * 4.Assume that there is at least one valid path to the bottom. 
+     * 5.If there are multiple paths, which result in the same maximum amount, you can choose any of them.
+     */
+
+        /* The rules state that I will start at the top and move downwards to the last possible node,
+         * though I imagine that is just show the idea behind the problem, and to ensure the right output.
+         * Since we do have access to the entire triangle right off the bat and I do not believe it changes
+         * the complexity of the problem. And here I am not refering to the run time complexity. However, as 
+         * far as I can tell the run time complexity should be considerably lower with this solution
+         * compared to a top down approach.
+         */
+
     class MaxPath
     {
         static void Main()
@@ -29,7 +49,7 @@ namespace TriangleMaxPath
             */
             // End of initialisation 
 
-            
+
             // I have mostly used the file, I just added the hardcoded version in case that is what you prefer,
             // and because I am not uploading the directory where I keep the file, to github.
             int[][] triangle = new int[][]
@@ -51,6 +71,7 @@ namespace TriangleMaxPath
                 new int[] { 924, 622, 911, 233, 325, 139, 721, 218, 253, 223, 107, 233, 230, 124, 233 },
             };
 
+            // Determine the best path up through the tree.
             int[] bestPath = BestPath(triangle);
 
             Output(bestPath);
