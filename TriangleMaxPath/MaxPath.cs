@@ -10,8 +10,8 @@ namespace TriangleMaxPath
     {
         static void Main()
         {
-            // Initialise file. Can comment this part if the hardcoded version is prefered,
-            string filePath = Path.Combine(Environment.CurrentDirectory, @"Tests\Big.txt");
+            // Initialise file.
+            /*string filePath = Path.Combine(Environment.CurrentDirectory, @"Tests\Big.txt");
 
             StreamReader sr = new StreamReader(filePath);
             int lineCount = File.ReadLines(filePath).Count();
@@ -24,11 +24,13 @@ namespace TriangleMaxPath
                 triangle[i] = line.Split(" ").Select(int.Parse).ToArray();
             }
             sr.Close();
-
+            */
             // End of initialisation 
 
-            // I have mostly used the file, I just added the hardcoded version in case that is what you prefer.
-            /*int[][] triangle = new int[][]
+            
+            // I have mostly used the file, I just added the hardcoded version in case that is what you prefer,
+            // and because I am not uploading the directory where I keep the file, to github.
+            int[][] triangle = new int[][]
             {
                 new int[] { 215 },
                 new int[] { 192, 124 },
@@ -45,25 +47,12 @@ namespace TriangleMaxPath
                 new int[] { 131, 171, 522, 137, 217, 224, 291, 413, 528, 520, 227, 229, 928 },
                 new int[] { 223, 626, 034, 683, 839, 052, 627, 310, 713, 999, 629, 817, 410, 121 },
                 new int[] { 924, 622, 911, 233, 325, 139, 721, 218, 253, 223, 107, 233, 230, 124, 233 },
-            };*/
+            };
 
             int[] bestPath = BestPath(triangle);
 
             Output(bestPath);
 
-        }
-
-        // Prints the Max sum and the max value path based on the found path.
-        static void Output(int[] bestPath)
-        {
-            Console.WriteLine("Max sum: " + bestPath.Sum());
-
-            string outputPath = "Path: " + bestPath[bestPath.Length-1];
-            for (int i = bestPath.Length-2; i >= 0; i--)
-            {
-                outputPath += ", " + bestPath[i];
-            }
-            Console.WriteLine(outputPath);
         }
 
         static int[] BestPath(int[][] triangle)
@@ -193,18 +182,19 @@ namespace TriangleMaxPath
                 }
             }
             
-            // FOR TESTING. Prints out the "simplified" triangle.
-            //for (int i = 0; i <= len - 1; i++)
-            //{
-            //    string nextLine = "";
-            //    for (int j = 0; j <= triangle[i].Length - 1; j++)
-            //    {
-            //        nextLine += triangle[i][j] + " ";
-            //    }
-            //   Console.WriteLine(nextLine);
-            //}
-
             return triangle;
+        }
+        // Prints the Max sum and the max value path based on the found path.
+        static void Output(int[] bestPath)
+        {
+            Console.WriteLine("Max sum: " + bestPath.Sum());
+
+            string outputPath = "Path: " + bestPath[bestPath.Length - 1];
+            for (int i = bestPath.Length - 2; i >= 0; i--)
+            {
+                outputPath += ", " + bestPath[i];
+            }
+            Console.WriteLine(outputPath);
         }
     }
 }

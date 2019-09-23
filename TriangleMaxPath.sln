@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TriangleMaxPath", "TriangleMaxPath\TriangleMaxPath.csproj", "{2C607245-077D-44CD-A4BC-8C8968B5D7BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "..\Test\Test\Test.csproj", "{9577390F-212C-42BA-8F7A-199619729C38}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{2C607245-077D-44CD-A4BC-8C8968B5D7BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C607245-077D-44CD-A4BC-8C8968B5D7BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C607245-077D-44CD-A4BC-8C8968B5D7BE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9577390F-212C-42BA-8F7A-199619729C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9577390F-212C-42BA-8F7A-199619729C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9577390F-212C-42BA-8F7A-199619729C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9577390F-212C-42BA-8F7A-199619729C38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
