@@ -32,6 +32,7 @@ namespace TriangleMaxPath
         {
             // Initialise file.
             // Assuming the file is of the same format as it appeared in the email.
+            
             /*string filePath = Path.Combine(Environment.CurrentDirectory, @"Tests\Big.txt");
 
             StreamReader sr = new StreamReader(filePath);
@@ -47,6 +48,7 @@ namespace TriangleMaxPath
             }
             sr.Close();
             */
+
             // End of initialisation 
 
 
