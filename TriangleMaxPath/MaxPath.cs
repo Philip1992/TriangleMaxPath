@@ -11,6 +11,7 @@ namespace TriangleMaxPath
         static void Main()
         {
             // Initialise file.
+            // Assuming the file is of the same format as it appeared in the email.
             /*string filePath = Path.Combine(Environment.CurrentDirectory, @"Tests\Big.txt");
 
             StreamReader sr = new StreamReader(filePath);
@@ -21,6 +22,7 @@ namespace TriangleMaxPath
             for (int i = 0; i < lineCount; i++)
             {
                 String line = sr.ReadLine();
+                line = line.Trim();
                 triangle[i] = line.Split(" ").Select(int.Parse).ToArray();
             }
             sr.Close();
